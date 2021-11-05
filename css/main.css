@@ -108,7 +108,19 @@ body {
   width: 300px;
   height: 40px;
 }
-#book svg * {
+#book {
+  width: 300px;
+  height: 300px;
+  display: none;
+  position: relative;
+  overflow: hidden;
+}
+.book {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+}
+.book svg * {
   cursor: pointer;
 }
 /* ==========================================================================
