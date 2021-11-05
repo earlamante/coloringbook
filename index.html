@@ -54,11 +54,39 @@
 <a href="#" class="prevCB">Previous</a> | <a href="#" class="nextCB">Next</a>
 
 <div class="py-3">
-  <a href="#" class="show-now">Shop Now</a>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#shopNow">
+    Shop Now
+  </button>
 </div>
 
 <p class="m-0">Picked:</p>
 <div id="picked" data-color="#f00" style="background: #f00;"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="shopNow" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          You can get all these products on Amazon<br>
+          But wait! Here's a discount code you can use :)
+        </p>
+        <p class="py-3 text-center">
+          Hen XXXXXX<br>
+          Turtle XXXXXXXXXXXX<br>
+          Flower XXXXXXXXXXXXXX<br>
+          Scratch book XXXXXXXXXXXX
+        </p>
+        <p class="text-center">
+          <a href="#" class="btn btn-secondary">Purchase on Amazon</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="js/vendor/jquery-3.6.0.min.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
