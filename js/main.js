@@ -1,11 +1,24 @@
 let colorpicked = '#f00',
   p = $('#picked'),
   book = $('#book'),
-  bookW = book.outerWidth();
+  crayons = $('#crayons'),
+  bookW = book.outerWidth(),
+  colors = [
+    '#FFFF00',
+    '#ffa500',
+    '#ff0000',
+    '#ff1493',
+    '#008000',
+    '#0000cd',
+    '#800080',
+    '#a52a2a',
+    '#ffffff',
+    '#000000'
+  ];
 
 (function($) {
 
-  $('#crayons').on('click', 'a', function(e) {
+  crayons.on('click', 'a', function(e) {
     e.preventDefault();
     let elem = $(this);
     colorpicked = elem.data('color');
@@ -46,6 +59,11 @@ let colorpicked = '#f00',
     });
     d.data('active', 0);
     d.appendTo(book);
+
+    for(i=0; i < colors.length; i++) {
+      crayons.append('<a href="#" data-color="'+ colors[i] +'" style="background: '+ colors[i] +';"></a>');
+    }
+
     book.show();
   };
 

@@ -92,12 +92,10 @@ textarea {
   width: 100vw;
 }
 
-#crayons {
-  height: 70px;
-}
 #crayons a {
   display: inline-block;
   border: 2px solid #000;
+  margin: 0 5px;
   width: 40px;
   height: 40px;
 }
@@ -238,6 +236,14 @@ textarea {
   /*  width: 750px;*/
   /*  height: 750px;*/
   /*}*/
+
+  #crayons {
+    width: 70px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 @media (min-width: 992px) {
   /*#book {*/
