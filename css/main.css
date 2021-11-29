@@ -106,16 +106,16 @@ textarea {
   height: 40px;
 }
 #book {
-  width: 370px;
-  height: 370px;
+  width: 300px;
+  height: 300px;
   display: none;
   position: relative;
   overflow: hidden;
 }
 .book {
   display: inline-block;
-  width: 370px;
-  height: 370px;
+  width: 300px;
+  height: 300px;
 }
 .book svg * {
   cursor: pointer;
@@ -230,34 +230,34 @@ textarea {
   }
 }
 @media (min-width: 768px) {
-  #book {
-    width: 750px;
-    height: 750px;
-  }
-  .book {
-    width: 750px;
-    height: 750px;
-  }
+  /*#book {*/
+  /*  width: 750px;*/
+  /*  height: 750px;*/
+  /*}*/
+  /*.book {*/
+  /*  width: 750px;*/
+  /*  height: 750px;*/
+  /*}*/
 }
 @media (min-width: 992px) {
-  #book {
-    width: 950px;
-    height: 950px;
-  }
-  .book {
-    width: 950px;
-    height: 950px;
-  }
+  /*#book {*/
+  /*  width: 950px;*/
+  /*  height: 950px;*/
+  /*}*/
+  /*.book {*/
+  /*  width: 950px;*/
+  /*  height: 950px;*/
+  /*}*/
 }
 @media (min-width: 1200px) {
-  #book {
-    width: 1150px;
-    height: 1150px;
-  }
-  .book {
-    width: 1150px;
-    height: 1150px;
-  }
+  /*#book {*/
+  /*  width: 1150px;*/
+  /*  height: 1150px;*/
+  /*}*/
+  /*.book {*/
+  /*  width: 1150px;*/
+  /*  height: 1150px;*/
+  /*}*/
 }
 
 /* ==========================================================================
