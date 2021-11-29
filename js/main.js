@@ -1,6 +1,7 @@
 let colorpicked = '#f00',
   p = $('#picked'),
-  book = $('#book');
+  book = $('#book'),
+  bookW = book.outerWidth();
 
 (function($) {
 
@@ -12,7 +13,7 @@ let colorpicked = '#f00',
     p.data('color', colorpicked);
   });
 
-  $('.book').on('click', 'svg > *', function(e) {
+  $('.book').on('click', '.fillable', function(e) {
     let elem = $(this);
     elem.attr('fill', p.data('color'));
   });
@@ -39,8 +40,8 @@ let colorpicked = '#f00',
     });
 
     d.css({
-      width: 300*c+'px',
-      height: '300px',
+      width: bookW*c+'px',
+      height: bookW+'px',
       transition: 'all 300ms ease-in-out'
     });
     d.data('active', 0);
@@ -68,7 +69,7 @@ let colorpicked = '#f00',
 
   let goCD = function(p) {
     d.data('active', p);
-    d.css('transform', 'translateX(-'+ p*300 +'px)');
+    d.css('transform', 'translateX(-'+ p*bookW +'px)');
     $('h3').text('Design ' + (parseInt(p)+1));
   };
 

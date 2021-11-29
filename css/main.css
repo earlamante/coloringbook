@@ -87,15 +87,13 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-body {
-  padding: 15px;
+.cb-container {
+  min-height: 100vh;
+  width: 100vw;
 }
+
 #crayons {
   height: 70px;
-  width: 300px;
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 15px;
 }
 #crayons a {
   display: inline-block;
@@ -105,20 +103,19 @@ body {
 }
 #picked {
   border: 2px solid #000;
-  width: 300px;
   height: 40px;
 }
 #book {
-  width: 300px;
-  height: 300px;
+  width: 370px;
+  height: 370px;
   display: none;
   position: relative;
   overflow: hidden;
 }
 .book {
   display: inline-block;
-  width: 300px;
-  height: 300px;
+  width: 370px;
+  height: 370px;
 }
 .book svg * {
   cursor: pointer;
@@ -220,6 +217,47 @@ body {
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
+}
+
+@media (min-width: 576px) {
+  #book {
+    width: 550px;
+    height: 550px;
+  }
+  .book {
+    width: 550px;
+    height: 550px;
+  }
+}
+@media (min-width: 768px) {
+  #book {
+    width: 750px;
+    height: 750px;
+  }
+  .book {
+    width: 750px;
+    height: 750px;
+  }
+}
+@media (min-width: 992px) {
+  #book {
+    width: 950px;
+    height: 950px;
+  }
+  .book {
+    width: 950px;
+    height: 950px;
+  }
+}
+@media (min-width: 1200px) {
+  #book {
+    width: 1150px;
+    height: 1150px;
+  }
+  .book {
+    width: 1150px;
+    height: 1150px;
+  }
 }
 
 /* ==========================================================================
