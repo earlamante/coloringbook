@@ -50,6 +50,12 @@ textarea {
 body {
   font-family: 'Permanent Marker', cursive;
 }
+body.coloring,
+body.coloring .cb-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 
 body.not-ready {
   opacity: 0;
@@ -57,7 +63,7 @@ body.not-ready {
 
 .bg-background {
   background-color: #fff;
-  background-image: url(https://cdn.shopify.com/s/files/1/0448/3645/4554/files/Logo_toypix_-_Final_-_square.png);
+  /*background-image: url(https://cdn.shopify.com/s/files/1/0448/3645/4554/files/Logo_toypix_-_Final_-_square.png);*/
   background-repeat: no-repeat;
   background-position: center center;
   width: 100vw;
@@ -103,9 +109,9 @@ body.not-ready {
 #crayons {
   width: 70px;
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100px) rotate(-90deg);
 }
 #crayons a,
 .pen-wrapper {
@@ -130,26 +136,27 @@ body.not-ready {
   height: 40px;
 }
 #book {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   position: relative;
   overflow: hidden;
 }
 .book {
   display: inline-block;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
 }
 .book svg * {
   cursor: pointer;
 }
+
 #coloringbook .btn {
   display: block;
   font-size: 18px;
   margin: 0 auto 15px;
 }
 #coloringbook .content {
-  transform: translateX(30px);
+  transform: translateY(-30px);
 }
 /* ==========================================================================
    Helper classes
@@ -221,18 +228,23 @@ body.not-ready {
 }
 @media (min-width: 768px) {
   #coloringbook .content {
-    transform: translateX(75px);
+    transform: translateY(-75px);
   }
   #coloringbook .btn {
     display: inline-block;
     font-size: 26px;
   }
-
+  #crayons {
+    transform: translate(-50%, 100px) rotate(-90deg) scale(1.5);
+  }
+}
+@media (min-width: 992px) {
   #crayons {
     width: 70px;
     position: absolute;
     left: 0;
     top: 50%;
+    bottom: initial;
     transform: translateY(-50%);
   }
   #crayons a,
@@ -251,12 +263,14 @@ body.not-ready {
     transform: rotate(225deg) translate(451px, 50px);
   }
 }
-@media (min-width: 992px) {
-
-}
 @media (min-width: 1200px) {
   #coloringbook .content {
-    transform: translateX(0);
+    transform: translateY(0);
+  }
+  #book,
+  .book {
+    height: 70vh;
+    width: 70vh;
   }
 }
 

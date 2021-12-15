@@ -94,10 +94,15 @@ let colorpicked = '#f00',
   let goPage = function(p) {
     bg.removeClass('blur');
     $('.cb-container').addClass('loading');
+    $('body').removeClass('coloring');
 
     setTimeout(function() {
       bg.addClass('blur');
       $(p).removeClass('loading');
+
+      if(p === '#coloringbook') {
+        $('body').addClass('coloring');
+      }
     }, 150);
   };
 
